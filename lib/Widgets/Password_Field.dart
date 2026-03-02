@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/* My Password Field*/
 class PasswordField extends StatefulWidget {
   const PasswordField({super.key});
 
@@ -13,13 +14,12 @@ class _PasswordFieldState extends State<PasswordField> {
   @override
   Widget build(BuildContext context) {
     return Directionality(
-      textDirection:
-          TextDirection.rtl, // Full RTL: text + icons start from right
+      textDirection: TextDirection.rtl,
       child: TextField(
         obscureText: isObscure,
         decoration: InputDecoration(
-          hintText: "أدخل كلمة المرور", // Arabic hint
-          prefixIcon: const Icon(Icons.lock_outline), // now on the right
+          hintText: "أدخل كلمة المرور",
+          prefixIcon: const Icon(Icons.lock_outline),
           suffixIcon: IconButton(
             icon: Icon(isObscure ? Icons.visibility_off : Icons.visibility),
             onPressed: () {

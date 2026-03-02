@@ -1,7 +1,10 @@
 import 'dart:convert';
+
 import 'package:http/http.dart' as http;
+
 import '../models/product_model.dart';
 
+/* Fetching data from API*/
 class ApiService {
   static const String baseUrl = 'https://fakestoreapi.com/products';
 

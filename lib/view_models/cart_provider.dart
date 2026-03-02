@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:sotre_app/models/product_model.dart';
 import 'package:sotre_app/models/cart_model.dart';
 
+/* Cart Provider*/
 class CartProvider extends ChangeNotifier {
   final List<CartItem> _items = [];
 
   List<CartItem> get items => _items;
 
   void addToCart(Product product) {
-    // Check if product already exists
+    /*Check if product already exists*/
     final index = _items.indexWhere((item) => item.id == product.id);
 
     if (index >= 0) {

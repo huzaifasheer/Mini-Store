@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:sotre_app/Widgets/Custom_app_Bar.dart';
+import 'package:sotre_app/vew_models/cart_provider.dart';
 
-import '../View_Model/cart_provider.dart';
-
+/*Cart Screen*/
 class CartScreen extends StatelessWidget {
   const CartScreen({super.key});
 
@@ -45,9 +45,9 @@ class CartScreen extends StatelessWidget {
                                 fit: BoxFit.contain,
                               ),
                             ),
-      
+
                             const SizedBox(width: 12),
-      
+
                             /// Title & Price
                             Expanded(
                               child: Column(
@@ -74,7 +74,7 @@ class CartScreen extends StatelessWidget {
                                 ],
                               ),
                             ),
-      
+
                             /// Delete Button
                             IconButton(
                               icon: const Icon(Icons.delete, color: Colors.red),
@@ -89,7 +89,6 @@ class CartScreen extends StatelessWidget {
                   );
                 },
               ),
-        
       ),
     );
   }

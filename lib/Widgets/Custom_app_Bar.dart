@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:sotre_app/View/cart_screen.dart';
 
+/* My Custom App Bar*/
+
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
   final VoidCallback? onBack;
@@ -14,7 +16,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
     return Container(
-      height: height * 0.05 ,
+      height: height * 0.05,
       padding: const EdgeInsets.symmetric(horizontal: 16),
       decoration: const BoxDecoration(color: Colors.black),
       child: SafeArea(
@@ -34,19 +36,17 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               ),
             ),
             InkWell(
-              onTap: (){
+              onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                    builder: (context) => const CartScreen(),
-                  ),
+                  MaterialPageRoute(builder: (context) => const CartScreen()),
                 );
               },
-              child: const Icon(Icons.shopping_cart, color: Colors.white)),
+              child: const Icon(Icons.shopping_cart, color: Colors.white),
+            ),
           ],
         ),
       ),
     );
   }
 }
-

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sotre_app/View/product_list_screen.dart';
 
+/*My Login Button*/
 class LoginButton extends StatefulWidget {
   const LoginButton({super.key});
 
@@ -32,9 +33,9 @@ class _LoginButtonState extends State<LoginButton> {
           ),
           child: Center(
             child: Directionality(
-              textDirection: TextDirection.rtl, // Right-to-left
+              textDirection: TextDirection.rtl,
               child: Text(
-                "تسجيل الدخول", // Arabic for "Login"
+                "تسجيل الدخول",
                 style: const TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.w500,

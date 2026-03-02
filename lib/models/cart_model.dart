@@ -1,3 +1,4 @@
+/* Cart items Model*/
 class CartItem {
   final int id;
   final String title;

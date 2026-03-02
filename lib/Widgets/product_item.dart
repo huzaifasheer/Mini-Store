@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../models/product_model.dart';
 
+/* Product item*/
 class ProductItem extends StatelessWidget {
   final Product product;
   final VoidCallback onTap;
@@ -15,7 +16,7 @@ class ProductItem extends StatelessWidget {
       onTap: onTap,
       child: Padding(
         padding: EdgeInsets.symmetric(
-          horizontal: width * 0.04, 
+          horizontal: width * 0.04,
           vertical: width * 0.02,
         ),
         child: Card(
