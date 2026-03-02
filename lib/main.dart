@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:sotre_app/View/Splash_Screen.dart';
+import 'package:sotre_app/vew_models/Product_view.dart';
+import 'package:sotre_app/vew_models/cart_provider.dart';
 
-import 'package:sotre_app/View_Model/Product_view.dart';
-import 'package:sotre_app/View_Model/cart_provider.dart'; // import your ViewModel
+// import your ViewModel
 
 void main() {
   runApp(
     MultiProvider(
-      providers: [ 
+      providers: [
         ChangeNotifierProvider(create: (_) => ProductViewModel()),
-         ChangeNotifierProvider(create: (_) => CartProvider()),
-        ],
+        ChangeNotifierProvider(create: (_) => CartProvider()),
+      ],
       child: const MyApp(),
     ),
   );
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     // Call fetchProducts once when app starts
     final productVM = Provider.of<ProductViewModel>(context, listen: false);
-    productVM.fetchProducts(); // ✅ API call + prints data in console
+    productVM.fetchProducts(); /*API call + prints data in console*/
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,

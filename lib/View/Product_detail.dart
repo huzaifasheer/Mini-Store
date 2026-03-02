@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:sotre_app/View_Model/cart_provider.dart';
 import 'package:sotre_app/Widgets/Custom_app_Bar.dart';
-
+import 'package:sotre_app/vew_models/cart_provider.dart';
 import '../models/product_model.dart';
+
+/* Product detail screen*/
 
 class ProductDetailScreen extends StatelessWidget {
   final Product product;
@@ -33,9 +34,9 @@ class ProductDetailScreen extends StatelessWidget {
                   width: width * 0.6,
                   child: Image.network(product.image, fit: BoxFit.contain),
                 ),
-      
+
                 SizedBox(height: width * 0.05),
-      
+
                 /// 🔹 Details Card
                 Material(
                   elevation: 5,
@@ -58,9 +59,9 @@ class ProductDetailScreen extends StatelessWidget {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-      
+
                         SizedBox(height: width * 0.04),
-      
+
                         /// Description
                         Text(
                           product.description,
@@ -69,9 +70,9 @@ class ProductDetailScreen extends StatelessWidget {
                             color: Colors.grey[700],
                           ),
                         ),
-      
+
                         SizedBox(height: width * 0.06),
-      
+
                         /// Price + Button Row
                         Row(
                           children: [
@@ -94,11 +95,11 @@ class ProductDetailScreen extends StatelessWidget {
                                 ),
                               ),
                             ),
-      
+
                             const Spacer(),
-      
+
                             /// Add to Cart Button
-                           InkWell(
+                            InkWell(
                               onTap: () {
                                 Provider.of<CartProvider>(
                                   context,
@@ -138,7 +139,7 @@ class ProductDetailScreen extends StatelessWidget {
                                   ],
                                 ),
                               ),
-                            )
+                            ),
                           ],
                         ),
                       ],
