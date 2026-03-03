@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:sotre_app/View/Splash_Screen.dart';
-import 'package:sotre_app/vew_models/Product_view.dart';
-import 'package:sotre_app/vew_models/cart_provider.dart';
+import 'package:sotre_app/view_models/Product_view.dart';
+import 'package:sotre_app/view_models/cart_provider.dart';
 
 // import your ViewModel
 
